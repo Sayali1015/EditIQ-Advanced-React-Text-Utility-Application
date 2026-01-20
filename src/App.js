@@ -1,36 +1,30 @@
-import './App.css';
 import React, { useState } from 'react';
-import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
-// import About from './components/About';
+import About from './components/About';
 
+function App() {
+  const [mode, setMode] = useState("light");
 
+  const toggleMode = () => {
+    setMode(mode === 'light' ? 'dark' : 'light');
+    document.body.style.backgroundColor =
+      mode === 'light' ? '#121212' : 'white';
+  };
 
-  function App() {
-    const [mode, setMode] = useState("light"); //weather darkmode enabled or not
+  return (
+    <Router>
+      <Navbar mode={mode} toggleMode={toggleMode} />
 
-   const toggleMode = () => {
-  if (mode === 'light') {
-    setMode('dark');
-    document.body.style.backgroundColor = 'grey';
-  } else {
-    setMode('light');
-    document.body.style.backgroundColor = 'white';
+      <div className="container my-4">
+        <Routes>
+          <Route path="/" element={<TextForm mode={mode} heading="Enter the text to analyze" />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
 
-  }
-};
-
-    return (
-      <>
-        <Navbar title = "TypoFix" aboutText = "About" mode={mode} toggleMode={toggleMode}/>
-
-        <div className="container my-3">
-          <TextForm heading ="Enter the text to analyze below"/>
-          {/* <About/> */}
-        </div>
-        
-      </>
-    );
-  }
-
-  export default App;
+export default App;
