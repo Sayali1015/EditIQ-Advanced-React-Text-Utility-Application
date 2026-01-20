@@ -102,7 +102,7 @@ Demonstration project for frontend interviews
 
 🔐 User authentication and saved notes
 
-👩‍💻 Author
+👩‍💻 Author:
 Sayali Sanjay Rajude
 Bachelor of Engineering – Computer Science
 
