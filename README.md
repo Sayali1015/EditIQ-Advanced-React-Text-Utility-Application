@@ -106,4 +106,4 @@ Demonstration project for frontend interviews
 
 Sayali Sanjay Rajude
 Bachelor of Engineering – Computer Science
-Frontend / React Developer (Fresher)
+
