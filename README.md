@@ -104,5 +104,5 @@ Demonstration project for frontend interviews
 
 👩‍💻 Author:
 Sayali Sanjay Rajude
-Bachelor of Engineering – Computer Science
+Bachelor of Engineering – Computer Engineering
 
